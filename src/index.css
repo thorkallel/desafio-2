@@ -1,0 +1,66 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Spline+Sans:wght@300..700&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@theme {
+  --font-quicksand: "Quicksand", sans-serif;
+  --font-spline-sans: "Spline Sans", sans-serif;
+}
+
+@layer base {
+  body {
+    font-family: "Quicksand", sans-serif;
+    background: linear-gradient(to bottom, #1a1a1a, #4a4a4a);
+    min-height: 100vh;
+  }
+
+  h1 {
+    @apply text-6xl text-left;
+  }
+
+  h2 {
+    @apply text-5xl text-left;
+  }
+
+  h3 {
+    @apply text-3xl text-left;
+  }
+
+  h4 {
+    @apply text-2xl text-left;
+  }
+
+  h5 {
+    @apply text-lg text-left font-bold;
+  }
+
+  h6 {
+    @apply text-base text-left font-bold;
+  }
+}
+
+@layer components {
+  .nav-link {
+    @apply relative flex h-full items-center p-2 cursor-pointer font-bold text-pink-200 hover:text-zinc-200 hover:bg-white/10 transition-colors ease-in-out;
+  }
+  .smooth-scroll {
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(255, 255, 255, 0.3) transparent;
+  }
+
+  .smooth-scroll::-webkit-scrollbar {
+    height: 6px;
+  }
+
+  .smooth-scroll::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  .smooth-scroll::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 20px;
+  }
+}
